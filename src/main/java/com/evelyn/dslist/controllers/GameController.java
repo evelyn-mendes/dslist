@@ -1,7 +1,6 @@
 package com.evelyn.dslist.controllers;
 
 import com.evelyn.dslist.dto.GameMinDTO;
-import com.evelyn.dslist.entities.Game;
 import com.evelyn.dslist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +17,7 @@ public class GameController {
     private GameService gameService;
 
     @GetMapping
-    public List<GameMinDTO> findAll () {
-        List<GameMinDTO> result = gameService.findAll();
-        return result;
+    public List<GameMinDTO> findAll() {
+        return gameService.findAll();
     }
 }
